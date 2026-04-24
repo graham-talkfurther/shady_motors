@@ -1,26 +1,40 @@
-# Evaluating Shady Shane
+# Overview
 
-Shady Motors is a used car dealership. Its owner, Shady Shane, just deployed an AI chatbot to handle sales. Your job: build evaluations for it.
+Shady Motors is a used car dealership. Shady Shane is an AI salesman chatbot who runs the dealership. Your job: build evaluations for Shane's performance.
 
-## The ask
+# The Ask
 
-Design and start implementing evaluations. We care about **your thinking**, not what you ship — half-done work with clear reasoning beats polished noise.
+This is a very open-ended challenge to design and start implementing a system for evaluating Shane's performance along different dimensions.
+We care about **your thinking**, not what you ship — half-done work with clear reasoning is ALWAYS BETTER than something polished you can't explain.
 
-## Setup
+# Key Questions
+
+This is a fairly large project, and it is okay if you do finish. This is where prioritization comes in - be most impactful for the time you have!
+A successful candidate will demonstrate their systems-level thinking and productive use of AI tools, even if there is not enough to build an optimal solution.
+
+Key Questions:
+- Where do you start?
+- Which dimensions do you choose to evaluate?
+- How do you prioritize work given the time constraints?
+- What architecture/approach are you taking toward evaluations?
+- Do you understand tradeoffs of various approaches?
+- Do you understand common pitfalls with evaluations?
+- Have you considered how to handle hallucinations?
+- How do you obtain a dataset?
+- How do you produce reliable grading for evaluation examples?
+
+# Files
+
+There are two important files:
+- this candidate brief
+- `bot.py` - contains both the system prompt used by Shane, and the base chat application
+
+The chat application logic is largely irrelevant, and does not need to be understood for this challenge - we are evaluating the prompt!
+
+# Setup
 
 ```bash
-pip install openai python-dotenv
+uv pip install -r requirements.txt
 echo "OPENAI_API_KEY=sk-..." > .env
-python bot.py
+uv run bot.py
 ```
-
-`bot.py` is the bot. Its **system prompt** (top of the file) is the ground truth for everything the bot is supposed to know.
-
-## Tools
-
-| Tool | Args |
-|---|---|
-| `finalize_sale` | `items: List[{purchase_type: PurchaseType, quantity: int}]`, `total_price: float` |
-| `close_up_shop` | — |
-
-`PurchaseType` is a 9-value enum covering individual cars and bundles.
