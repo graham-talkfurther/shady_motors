@@ -2,6 +2,8 @@
 
 Shady Motors is a used car dealership. Shady Shane is an AI salesman chatbot who runs the dealership. Your job: build evaluations for Shane's performance.
 
+You will be allowed to use AI tools for part of the challenge. Part of this challenge is to see how well you use AI tools to design and build the system.
+
 # The Ask
 
 This is a very open-ended challenge to design and start implementing a system for evaluating Shane's performance along different dimensions.
